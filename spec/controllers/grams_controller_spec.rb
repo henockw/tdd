@@ -163,14 +163,11 @@ RSpec.describe GramsController, type: :controller do
 
       post :create, params: { 
         gram: { 
-          message: 'Hello!', 
+          message: 'Hello!',
           picture: fixture_file_upload("/picture.png", 'image/png') 
         } 
       }
-
-
       expect(response).to redirect_to root_path
-
       gram = Gram.last
       expect(gram.message).to eq("Hello!")
       expect(gram.user).to eq(user)
