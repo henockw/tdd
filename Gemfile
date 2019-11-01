@@ -83,4 +83,4 @@ gem 'carrierwave', '~> 2.0'
 gem "figaro"
 gem 'carrierwave-aws'
 
-
+gem "aws-sdk-s3", require: false
